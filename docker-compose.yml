@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  golang:
+    build:
+      context: ./.devcontainer
+      dockerfile: Dockerfile
+    environment:
+      - VARIANT=1.17-bullseye
+      - NODE_VERSION=lts/*
+    volumes:
+      - ./:/go/src/work
